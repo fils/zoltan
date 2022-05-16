@@ -35,6 +35,6 @@ func PostCall(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(200)
 	fmt.Fprintf(w, "Zoltan is on it!")
 
-	Reply(r.PostForm["response_url"])
+	Reply(r.PostForm["response_url"], r.PostForm["text"])
 
 }

@@ -1,5 +1,48 @@
 package bothook
 
-func DoSPARQL() string {
-	return "nothing to say yet, return as JSON though when done..  "
+import (
+	"bytes"
+	"fmt"
+	"io/ioutil"
+	"log"
+	"net/http"
+	"net/url"
+	"strings"
+)
+
+func DoSPARQL(query []string) []byte {
+
+	fmt.Printf("Try to do SPARQL call with %s\n", query[0])
+
+	d := fmt.Sprintf("SELECT distinct ?subj  WHERE {?lit bds:search \"%s\" . ?subj ?p ?lit .}", query[0])
+	//d := fmt.Sprint("SELECT distinct ?subj  WHERE {?lit bds:search 'test' . ?subj ?p ?lit .}")
+
+	spql := "https://graph.geodex.org/blazegraph/namespace/nabu/sparql"
+
+	pab := []byte("")
+	params := url.Values{}
+	params.Add("query", d)
+	req, err := http.NewRequest("GET", fmt.Sprintf("%s?%s", spql, params.Encode()), bytes.NewBuffer(pab))
+	if err != nil {
+		log.Println(err)
+	}
+	req.Header.Set("Accept", "application/sparql-results+json")
+
+	client := &http.Client{}
+	resp, err := client.Do(req)
+	if err != nil {
+		log.Println(err)
+	}
+
+	//defer resp.Body.Close()
+
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		log.Println(strings.Repeat("ERROR", 5))
+		log.Println("response Status:", resp.Status)
+		log.Println("response Headers:", resp.Header)
+		log.Println("response Body:", string(body))
+	}
+
+	return body
 }

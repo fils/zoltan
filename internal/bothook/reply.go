@@ -3,18 +3,19 @@ package bothook
 import (
 	"bufio"
 	"bytes"
-	"encoding/json"
 	"fmt"
 	"net/http"
 )
 
-func Reply(resurl []string) {
+func Reply(resurl, query []string) {
 	fmt.Printf("Will try to send to the responce URL: %s \n", resurl[0])
 
-	postBody, _ := json.Marshal(map[string]string{
-		"name":  "GeoCODES user",
-		"email": "gcu@example.com",
-	})
+	postBody := DoSPARQL(query)
+
+	//postBody, _ := json.Marshal(map[string]string{
+	//	"name":  "GeoCODES user",
+	//	"email": "gcu@example.com",
+	//})
 	responseBody := bytes.NewBuffer(postBody)
 
 	resp, err := http.Post(resurl[0], "application/json", responseBody)
