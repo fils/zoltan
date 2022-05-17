@@ -1,0 +1,41 @@
+{
+  "blocks": [
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "Thanks for using GeoCODES.  The following are the top 3 results  See more results at <https://geocodes.org|GeoCODES>"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*<fakeLink.toHotelPage.com|Windsor Court Hotel>*\n$340 per night\nRated: 9.4 - Excellent"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*<fakeLink.toHotelPage.com|The Ritz-Carlton New Orleans>*\n$340 per night\nRated: 9.1 - Excellent"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*<fakeLink.toHotelPage.com|Omni Royal Orleans Hotel>*\n$419 per night\nRated: 8.8 - Excellent"
+      }
+    }
+  ]
+}

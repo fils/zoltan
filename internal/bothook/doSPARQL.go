@@ -14,7 +14,18 @@ func DoSPARQL(query []string) []byte {
 
 	fmt.Printf("Try to do SPARQL call with %s\n", query[0])
 
-	d := fmt.Sprintf("SELECT distinct ?subj  WHERE {?lit bds:search \"%s\" . ?subj ?p ?lit .}", query[0])
+	d := fmt.Sprintf(`prefix schema: <http://schema.org/>
+				SELECT distinct ?subj ?score ?name ?desc ?lit	
+						WHERE {
+							?lit bds:search "%s" .
+							?lit bds:relevance ?score .
+							filter( ?score > 0.4).
+							?subj ?p ?lit .
+							?subj schema:name ?name . 
+							?subj schema:description ?desc . 
+				}
+				   ORDER BY DESC(?score)
+				LIMIT 5`, query[0])
 	//d := fmt.Sprint("SELECT distinct ?subj  WHERE {?lit bds:search 'test' . ?subj ?p ?lit .}")
 
 	spql := "https://graph.geodex.org/blazegraph/namespace/nabu/sparql"

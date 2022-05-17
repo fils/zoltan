@@ -11,13 +11,11 @@ func Reply(resurl, query []string) {
 	fmt.Printf("Will try to send to the responce URL: %s \n", resurl[0])
 
 	postBody := DoSPARQL(query)
+	//fmt.Println(string(postBody))
 
-	//postBody, _ := json.Marshal(map[string]string{
-	//	"name":  "GeoCODES user",
-	//	"email": "gcu@example.com",
-	//})
+	BuildReply(postBody)
+
 	responseBody := bytes.NewBuffer(postBody)
-
 	resp, err := http.Post(resurl[0], "application/json", responseBody)
 	//resp.Body
 

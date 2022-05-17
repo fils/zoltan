@@ -15,15 +15,6 @@ func PostCall(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// debug use only
-	//fmt.Println("------------------parse form below------------------------")
-	r.ParseForm()
-	//fmt.Println("request.Form::")
-	//for key, value := range r.Form {
-	//	fmt.Printf("Key:%s, Value:%s\n", key, value)
-	//
-	//}
-
 	fmt.Println("----------------post form below--------------------------")
 	fmt.Println("request.PostForm::")
 	for key, value := range r.PostForm {

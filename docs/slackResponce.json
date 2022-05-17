@@ -1,0 +1,108 @@
+{
+  "blocks": [
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "Hello from GeoCODES.   Thanks for using this search.  You can get more detailed and richer experiences directly at GeoCODES \n\n *Available actions:*"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "actions",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Visit Geocodes",
+            "emoji": true
+          },
+          "value": "click_me_123",
+          "url": "https://google.com"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Your search at GeoCODES",
+            "emoji": true
+          },
+          "value": "click_me_123",
+          "url": "https://google.com"
+        }
+      ]
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Results 1*\n Atlantic tropical cyclones (TCs) can cause significant societal and economic impacts, as 2019’s Dorian serves to remind us of these storms’ destructiveness. Decades of effort to understand and predict Atlantic TC activity ..."
+      }
+    },
+    {
+      "type": "actions",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "View Result",
+            "emoji": true
+          },
+          "value": "click_me_123",
+          "url": "https://google.com"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Result 2*\n Tropical Cyclones (TCs) generate extreme precipitation with severe impacts across large coastal and inland areas, calling for accurate frequency estimation methods. Statistical approaches that take into ... "
+      }
+    },
+    {
+      "type": "actions",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "View Result",
+            "emoji": true
+          },
+          "value": "click_me_123",
+          "url": "https://google.com"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Results 3*\n  This study examines the climatology and structure of rainfall associated with tropical cyclones (TCs) based on the atmosphere-only Coupled Model Intercomparison ..."
+      }
+    },
+    {
+      "type": "actions",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "View Result",
+            "emoji": true
+          },
+          "value": "click_me_123",
+          "url": "https://google.com"
+        }
+      ]
+    }
+  ]
+}
