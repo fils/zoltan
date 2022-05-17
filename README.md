@@ -2,8 +2,16 @@
 
 ## About
 
-Just exploring a simple Go code to listen for and
-respond to WebHook calls.  Exploring some  applications with various groups.  
+Boutique search engines must drive engagement to become part of a user's habit.  This means 
+being ubiquitous and low friction.  Be where the users are, don't expect them to come.  
+Their email, their messaging, etc.   This work is one small exploration of that larger process.  
+
+The command would look something like this, simply typed into the message block.
+
+/geocodes   Atlantic tropical cyclones
+
+The results would look something like:
+
 
 It will never be as cool at the 
 real [Zoltan](http://www.pinrepair.com/arcade/zoltan.htm) though!  

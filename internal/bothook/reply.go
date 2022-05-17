@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
+	"log"
 	"net/http"
 )
 
@@ -20,7 +21,7 @@ func Reply(resurl, query []string) {
 	//resp.Body
 
 	if err != nil {
-		panic(err)
+		log.Println(err)
 	}
 	defer resp.Body.Close()
 
@@ -32,7 +33,7 @@ func Reply(resurl, query []string) {
 	}
 
 	if err := scanner.Err(); err != nil {
-		panic(err)
+		log.Println(err)
 	}
 
 }

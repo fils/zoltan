@@ -66,7 +66,10 @@ func BuildReply(postBody []byte) string {
 	if err := json.Unmarshal(postBody, &res); err != nil {
 		panic(err)
 	}
-	fmt.Println(res.Results)
+
+	for x := range res.Results.Bindings {
+		fmt.Printf("------------ Result %d --------------\n%s\n", x, res.Results.Bindings[x].Name)
+	}
 
 	return "json for reply"
 }
