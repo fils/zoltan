@@ -60,7 +60,7 @@ type Blocks struct {
 	Text Text   `json:"text,omitempty"`
 }
 
-func BuildReply(postBody []byte) string {
+func BuildReply(postBody []byte) []byte {
 	res := SPARQLresp{}
 
 	if err := json.Unmarshal(postBody, &res); err != nil {
@@ -68,8 +68,16 @@ func BuildReply(postBody []byte) string {
 	}
 
 	for x := range res.Results.Bindings {
-		fmt.Printf("------------ Result %d --------------\n%s\n", x, res.Results.Bindings[x].Name)
+		fmt.Printf("------------ Result %d --------------\n%s\n%s\n\n", x, res.Results.Bindings[x].Subj, res.Results.Bindings[x].Name)
 	}
 
-	return "json for reply"
+	return []byte("{'head':'test'}")
+}
+
+func reitem() string {
+	return "*<fakeLink.toHotelPage.com|Windsor Court Hotel>*\\n$340 per night\\nRated: 9.4 - Excellent"
+}
+
+func header() string {
+	return "Thanks for using GeoCODES.  The following are the top 3 results  See more results at <https://geocodes.org|GeoCODES>"
 }

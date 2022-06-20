@@ -14,9 +14,9 @@ func Reply(resurl, query []string) {
 	postBody := DoSPARQL(query)
 	//fmt.Println(string(postBody))
 
-	BuildReply(postBody)
+	r := BuildReply(postBody)
 
-	responseBody := bytes.NewBuffer(postBody)
+	responseBody := bytes.NewBuffer(r)
 	resp, err := http.Post(resurl[0], "application/json", responseBody)
 	//resp.Body
 

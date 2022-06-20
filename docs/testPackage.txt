@@ -10,6 +10,6 @@ token=gIkuvaNzQIHg97ATvDxqgjtO
 &command=/weather
 &text=Atlantic tropical cyclones
 &response_urlORIG=https://hooks.slack.com/commands/1234/5678
-&response_url=https://webhook.site/a6b610ae-eee9-4e43-a64a-2e51b1eeb24e
+&response_url=https://webhook.site/0bbd880b-93c7-40c4-a283-482839c43a04
 &trigger_id=13345224609.738474920.8088930838d88f008e0
 &api_app_id=A123456
