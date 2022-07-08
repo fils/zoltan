@@ -41,4 +41,3 @@ how ActivityPub might be leveraged in this code analogous to RSS approaches.
 * RSS implementation whre either I just generate out results based on date time or date time mixed with qyery results
 * would there be some way to do special update pages (obscure URL) or email?
 
-
